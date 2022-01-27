@@ -44,26 +44,16 @@ const calculator = (number1, number2) => {
   return calcObj;
 };
 
-const arrayGenerator = (type, object) => {
-  let arrayRes = [];
-
+const arrayGenerator = (type, object) => {  
   switch (type) {
-    case 'keys': 
-      arrayRes.push('keys');
-      arrayRes.push(Object.keys(object));
-      break;
-    case 'values': 
-      arrayRes.push('values');
-      arrayRes.push(Object.values(object));
-      break;
+    case 'keys':       
+      return Object.keys(object);
+    case 'values':       
+      return Object.values(object);
     case 'entries': 
-      arrayRes.push('entries');
-      arrayRes.push(Object.entries(object));
-      break;
+      return Object.entries(object);
     default: 
   }
-
-  return arrayRes;
 };
 
 module.exports = { calculator, arrayGenerator };
